@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"/>  
+    <title>Muse Schedualer - Home</title>   
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">    
+    <link rel="stylesheet" href="css/Musestyle.css">
+	<script type="module", src="js/museschedulerprod.js"></script>
+</head>
+<body>
+	<main class="screeny">
+		<div class="sidebar">
+			<div class = "logo">
+			</div>
+			<div class="toolbar">
+				<div class="toolbarlink">
+					
+				</div>
+				<div class="toolbarlink">
+					
+				</div>
+				<div class="toolbarlink">
+					
+				</div>
+				<div class="toolbarlink">
+					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class = "screeny">
+				<div class = "leftdiv">
+					<div class= "djselector">
+						<div class="imglogo">
+							
+						</div>
+						<form id="make_checkbox_select">
+							<select name="make" id="djlistform">
+							<!--the following are  default options. On full implimentation, 
+							this will be populated using code, refrencing a database of 
+							DJs -->
+							<!--
+							<option value="DJ somebody 1">DJ somebody 1</option>
+							<option value="DJ somebody 2">DJ somebody 2</option>
+							<option value="DJ somebody 3">DJ somebody 3</option>-->
+							
+							</select>
+						</form>
+					</div>
+					<div name="playlistselector" class="box">
+						<div id="playlist_selector_container" class="box2">
+						<!--Will use java to overite nametag with name of DJ-->
+						<p name= "tag", id="playlistdjnametag">DJ ${DJname}'s playlists:</p>
+						<!-- The following can be thought of like card templates-->
+						<!--
+							<div class="playlistcard">
+								<p>P1</p>
+								<button class="button" id="bt1">Edit</button>
+							</div>
+							<div class="playlistcard">
+								<p>P2</p>
+								<button class="button"id="bt2">Edit</button>
+							</div>
+							<div class="playlistcard">
+								<p>P3</p>
+								<button class="button"id="bt3">Edit</button>
+							</div>
+							<div class="playlistcard">
+								<p>P4</p>
+								<button class="button"id="bt4">Edit</button>
+							</div>
+							<div class="playlistcard">
+								<p>...</p>
+								<button class="button"id="bt8add">Add</button>
+							</div>
+							<div class="playlistcard">
+								<p>...</p>
+								<button class="button"id="bt8add">Add</button>
+							</div>
+							<div class="playlistcard">
+								<p>...</p>
+								<button class="button"id="bt8add">Add</button>
+							</div>
+							<div class="playlistcard">
+								<p>...</p>
+								<button class="button"id="bt8add">Add</button>
+							</div>
+							<div class="playlistcard">
+								<p>...</p>
+								<button class="button"id="bt8add">Add</button>
+							</div>
+						</div>
+						-->
+					</div>
+				</div>
+				<div class="leftdiv">
+				<div name="playlistsongorganizer" class="box">
+					<div class="box" id="songlist_nametag">
+						<p>${Playlist} songs:</p>
+					</div>
+					<div class="box2 plsorgan" id = "cardlist_songlist">
+						<!--The followingcan be thought of like song cards-->
+						<!--
+						<div class="songcard">
+								<p>Song 1</p>
+								<p name="timeslot">11:50AM - 11:55AM</p>
+								<div>
+								<!--buttons for reordering elements->
+								<button class="button"id="bt8add">&uarr;</button>
+								<button class="button"id="bt8add">&darr;</button>
+								</div>
+						</div>
+						<div class="songcard">
+								<p>Song 2</p>
+								<p name="timeslot">11:55AM - 12:00AM</p>
+								<div>
+								<!--buttons for reordering elements->
+								<button class="button"id="bt8add">&uarr;</button>
+								<button class="button"id="bt8add">&darr;</button>
+								</div>
+						</div>
+						<div class="songcard">
+								<p>Song 3</p>
+								<p name="timeslot">12:00AM - 12:05AM</p>
+								<div>
+								<!--buttons for reordering elements->
+								<button class="button"id="bt8add">&uarr;</button>
+								<button class="button"id="bt8add">&darr;</button>
+								</div>
+						</div>
+						
+						<div class="songcard">
+								<p>...</p>
+								<button class="button"id="bt8add">Add</button>
+						</div>
+						-->
+					</div>
+				</div>
+					<div class="box2">
+						<div>Add a Song:</div>
+						<div class="box2">
+						<form id="songadder">
+							<input type = "text" id="sname" name="sname" placeholder="Song name..."><br>
+							<input type = "text" id="albumname" name="albumname" placeholder="Album name..."><br>
+							<input type = "text" id="artistname" name="artistname" placeholder="Artist name..."><br>
+							<div align="right">
+							<button class="button" type="reset" onclick="reseterrmsg()">Reset</button>
+							
+							<button id="submitbtn" class="button" type="button" onclick="formvalidation()">Add Song</button>
+							</div>
+							<div id="errmsgbox" class="errmsgbox"></div>
+							<!--Note, this should be moved to server side, 
+							otherwise user can bypass validation-->
+							<script>
+								/*
+								full implimentation will also run a funciton to add song to songlist, 
+								and a function to refresh display of songlist in playlist songs menu.
+								*/
+								function formvalidation(){	
+									let sname = document.getElementById("sname").value;
+									let albumname = document.getElementById("albumname").value;
+									let artistname = document.getElementById("artistname").value;
+									let text="";
+									if (sname==""||albumname==""||artistname==""){
+										text="Please fill out ALL fields."
+									}
+									
+									else{
+										reseterrmsg();
+										/*sname.value = "";
+										albumname.value = "";
+										artistname.value = "";*/
+									}
+									document.getElementById("errmsgbox").innerHTML = text;
+								}
+								function reseterrmsg(){
+									document.getElementById("errmsgbox").innerHTML = "";
+								}
+							</script>
+						</form>
+						<div>
+					</div>
+				</div>
+				
+			<div>
+		</div>
+	</main>
+</body>
+</html>

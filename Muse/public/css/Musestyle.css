@@ -1,0 +1,203 @@
+body {
+    font-family: Open Sans, sans-serif;
+    background-color: #191c1f;
+
+}
+.leftdiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-top: .5em;
+    margin-left: .5em;
+	margin-right: .5em;
+}
+.lbumper{
+	margin-left: .5em;
+	padding-left: .5em;
+	border-left: .5mm solid #191c1f;
+	align-items: center;
+}
+.djselector {
+	display: flex;
+	flex-direction: row;
+	min-width: 5em;
+	max-height: 2em;
+    background-color: white;
+    padding: .5em;
+	border: 1mm solid #191c1f;
+	border-radius: 15px;
+	margin-bottom: .5em;
+}
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 1em;
+}
+.imglogo {
+	display: flex;
+    align-items: center;
+	background-color: #ff9021;
+	min-height: 1.5em;
+	min-width: 1.5em;
+	margin: .5em;
+	border-radius: 5px;
+}
+.logo {
+	display: flex;
+    align-items: center;
+	background-color: #ff9021;
+	min-height: 3em;
+	min-width: 3em;
+	margin-top: .5em;
+    margin-left: .5em;
+	border-radius: 5px;
+}
+.toolbar {
+    display: flex;
+    align-items: center;
+	flex-direction:column;
+    justify-content: flex-start;
+	background-color: #f5e5c1;
+    min-height: 60vh;
+	min-width: 3em;
+    margin-top: 1em;
+    margin-left: .5em;
+	border-radius: 25px;
+}
+/*add flex-direction:column; to container on mobile*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+	background-color: #f5e5c1;
+    min-height: 75vh;
+	min-width: 100vw;
+    margin-top: 1em;
+    margin-left: .5em;
+	border-radius: 25px;
+	overflow: scroll;
+}
+.screeny {
+	display: flex;
+	flex-direction: row;
+}
+
+.box {
+    min-width: 20em;
+    background-color: white;
+    padding: .2em;
+	border: 1mm ridge #191c1f;
+	border-radius: 15px;
+}
+
+fieldset { border: 0pt}
+legend { font-weight: 700; margin: 0;}
+
+textarea, input {
+    border: none;
+    border: solid 1px #CCCCCC;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    margin-top: 0.5em;    
+}
+
+input {
+    height: 2em;
+}
+
+form p {
+    background-color: #FED4B2;
+    padding: 0.25em;
+    width: 100%
+}
+
+#thumb-list {
+    list-style: none;
+    margin: 0em;
+    padding: 0.35em;
+}
+
+#thumb-list li {
+    display: inline-block;
+    padding: 0 0.5em;
+}
+
+span {
+    background-color: #FFF0F0;
+    padding: 0.3em;
+}
+
+.box2{
+	margin-top: .5em;
+	min-width: 20em;
+	max-height: 20em;
+    background-color: white;
+    padding: 1em;
+	border: 1mm ridge #191c1f;
+	border-radius: 15px;
+	overflow: scroll;
+}
+.playlistcard{
+	display:flex;
+	flex-direction:row;
+	border: .5mm ridge #191c1f;
+	border-radius: 5px;
+	justify-content: space-between;
+	max-height:2em;
+	align-items:center;
+	margin-top: .5em
+}
+.songcard{
+	display:flex;
+	flex-direction:row;
+	border: .5mm ridge #191c1f;
+	border-radius: 5px;
+	justify-content: space-between;
+	max-height:2em;
+	align-items:center;
+	margin-top: -.1em
+}
+.button {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color:#ff9021;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding-top: .38em;
+  padding-bottom: .39em;
+  cursor: pointer;
+}
+p {padding-left: 5px;}
+.plsorgan{
+	min-width: 10em;
+	max-height: 5em;
+	margin-top:-.2em;
+	margin-left:2em;
+	border-radius: 5px;
+}
+.errmsgbox{
+	color:red;
+}
+.toolbarlink{
+	display: flex;
+    align-items: center;
+	background-color: #ff9021;
+	min-height: 2.5em;
+	min-width: 2.5em;
+	margin-top: .5em;
+	margin-bottom: 4em;
+	border-radius: 25px;
+}
